@@ -19,6 +19,14 @@
         </dd>
 
     </dl>
+    <h4>Teachers</h4>
+    <div class="list-group">
+        @foreach (var teacher in Model.Teachers)
+        {
+            @Html.ActionLink(teacher.Name, "Details", "Teacher", new { id = teacher.ID }, new { @class="list-group-item"})
+        }
+    </div>
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
