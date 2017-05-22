@@ -34,18 +34,13 @@ namespace TSMS.Controllers
                 return HttpNotFound();
             }
 
-            ViewModels.TeacherIndexViewModel TeacherViewModel = new ViewModels.TeacherIndexViewModel();
-
-            TeacherViewModel.Teacher = teacher;
-            TeacherViewModel.Department = teacher.DepartmentID.ToString();
-
-            return View(TeacherViewModel);
+            return View(teacher);
         }
 
         // GET: /Teacher/Create
         public ActionResult Create()
         {
-            ViewBag.DepartmentID = new SelectList(db.Departments, "ID", "Name");
+            PopulateDepartmentDropDownList();
             return View();
         }
 
@@ -62,7 +57,7 @@ namespace TSMS.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.DepartmentID = new SelectList(db.Departments, "ID", "Name");
+            PopulateDepartmentDropDownList();
             return View(teacher);
         }
 
@@ -78,6 +73,7 @@ namespace TSMS.Controllers
             {
                 return HttpNotFound();
             }
+            PopulateDepartmentDropDownList(teacher.DepartmentID);
             return View(teacher);
         }
 
@@ -86,7 +82,7 @@ namespace TSMS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ID,Name")] Teacher teacher)
+        public ActionResult Edit([Bind(Include="ID,Name, DepartmentID")] Teacher teacher)
         {
             if (ModelState.IsValid)
             {
@@ -94,6 +90,7 @@ namespace TSMS.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            PopulateDepartmentDropDownList(teacher.DepartmentID);
             return View(teacher);
         }
 
@@ -130,6 +127,14 @@ namespace TSMS.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        private void PopulateDepartmentDropDownList(object selectedDepartment = null)
+        {
+            var departmentQuery = from d in db.Departments
+                                  orderby d.Name
+                                  select d;
+            ViewBag.DepartmentID = new SelectList(departmentQuery, "ID", "Name", selectedDepartment);
         }
 
     }

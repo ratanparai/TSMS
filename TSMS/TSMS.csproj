@@ -125,6 +125,12 @@
     <EmbeddedResource Include="Migrations\201705220533400_remove-required-department-id.resx">
       <DependentUpon>201705220533400_remove-required-department-id.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705220723116_enabled-lazy-loading.resx">
+      <DependentUpon>201705220723116_enabled-lazy-loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705220745416_nullable-department.resx">
+      <DependentUpon>201705220745416_nullable-department.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -152,12 +158,19 @@
     <Compile Include="Migrations\201705220533400_remove-required-department-id.Designer.cs">
       <DependentUpon>201705220533400_remove-required-department-id.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705220723116_enabled-lazy-loading.cs" />
+    <Compile Include="Migrations\201705220723116_enabled-lazy-loading.Designer.cs">
+      <DependentUpon>201705220723116_enabled-lazy-loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705220745416_nullable-department.cs" />
+    <Compile Include="Migrations\201705220745416_nullable-department.Designer.cs">
+      <DependentUpon>201705220745416_nullable-department.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Models\TeacherContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\TeacherIndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\TSMS.mdf" />
