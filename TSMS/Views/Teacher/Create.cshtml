@@ -30,7 +30,6 @@
                 @Html.DropDownList("DepartmentID", "--- Select Department ---")
                 @Html.ActionLink("Add Department", "Create", "Department", new { @from="teacher"}, null)
                 @Html.ValidationMessageFor(model => model.DepartmentID)
-                @Html.ValidationMessageFor(model => model.Department)
             </div>
         </div>
 

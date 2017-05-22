@@ -126,6 +126,10 @@
     <Compile Include="Migrations\201705220820190_initial-migration.Designer.cs">
       <DependentUpon>201705220820190_initial-migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705220854598_Teacher-required-department.cs" />
+    <Compile Include="Migrations\201705220854598_Teacher-required-department.Designer.cs">
+      <DependentUpon>201705220854598_Teacher-required-department.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Teacher.cs" />
@@ -188,6 +192,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705220820190_initial-migration.resx">
       <DependentUpon>201705220820190_initial-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705220854598_Teacher-required-department.resx">
+      <DependentUpon>201705220854598_Teacher-required-department.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

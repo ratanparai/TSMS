@@ -14,6 +14,7 @@ namespace TSMS.Models
         [StringLength(50)]
         public string Name { get; set; }
 
+        [Required(ErrorMessage="Please select a Department")]
         public int DepartmentID { get; set; }
 
         public virtual Department Department { get; set; }
