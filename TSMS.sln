@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSMS", "TSMS\TSMS.csproj", "{2C155D02-BFDA-4553-BFE0-6DE12A00CDCC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSMS.Tests", "TSMS.Tests\TSMS.Tests.csproj", "{6C4C2AF2-3804-4FE9-9F29-64E1BE95D622}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSMS", "TSMS\TSMS.csproj", "{EB3D8CC2-3564-4246-A74B-804E00954F39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2C155D02-BFDA-4553-BFE0-6DE12A00CDCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C155D02-BFDA-4553-BFE0-6DE12A00CDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C155D02-BFDA-4553-BFE0-6DE12A00CDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C155D02-BFDA-4553-BFE0-6DE12A00CDCC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C4C2AF2-3804-4FE9-9F29-64E1BE95D622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C4C2AF2-3804-4FE9-9F29-64E1BE95D622}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C4C2AF2-3804-4FE9-9F29-64E1BE95D622}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C4C2AF2-3804-4FE9-9F29-64E1BE95D622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB3D8CC2-3564-4246-A74B-804E00954F39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB3D8CC2-3564-4246-A74B-804E00954F39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB3D8CC2-3564-4246-A74B-804E00954F39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB3D8CC2-3564-4246-A74B-804E00954F39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
