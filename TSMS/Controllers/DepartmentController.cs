@@ -36,8 +36,14 @@ namespace TSMS.Controllers
         }
 
         // GET: /Department/Create
-        public ActionResult Create()
+        public ActionResult Create(string from = null)
         {
+
+            if (!String.IsNullOrWhiteSpace(from))
+            {
+                ViewBag.From = from;
+            }
+
             return View();
         }
 
@@ -46,12 +52,18 @@ namespace TSMS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="ID,Name")] Department department)
+        public ActionResult Create([Bind(Include="ID,Name")] Department department, string from = null)
         {
             if (ModelState.IsValid)
             {
                 db.Departments.Add(department);
                 db.SaveChanges();
+
+                if (!String.IsNullOrWhiteSpace(from) && from.Equals("teacher"))
+                {
+                    return RedirectToAction("Create", "Teacher");
+                }
+
                 return RedirectToAction("Index");
             }
 

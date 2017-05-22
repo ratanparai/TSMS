@@ -113,26 +113,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705220432074_initial-migrate.resx">
-      <DependentUpon>201705220432074_initial-migrate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705220523326_requirements.resx">
-      <DependentUpon>201705220523326_requirements.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705220528140_add-departmentID.resx">
-      <DependentUpon>201705220528140_add-departmentID.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705220533400_remove-required-department-id.resx">
-      <DependentUpon>201705220533400_remove-required-department-id.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705220723116_enabled-lazy-loading.resx">
-      <DependentUpon>201705220723116_enabled-lazy-loading.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705220745416_nullable-department.resx">
-      <DependentUpon>201705220745416_nullable-department.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -142,29 +122,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705220432074_initial-migrate.cs" />
-    <Compile Include="Migrations\201705220432074_initial-migrate.Designer.cs">
-      <DependentUpon>201705220432074_initial-migrate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705220523326_requirements.cs" />
-    <Compile Include="Migrations\201705220523326_requirements.Designer.cs">
-      <DependentUpon>201705220523326_requirements.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705220528140_add-departmentID.cs" />
-    <Compile Include="Migrations\201705220528140_add-departmentID.Designer.cs">
-      <DependentUpon>201705220528140_add-departmentID.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705220533400_remove-required-department-id.cs" />
-    <Compile Include="Migrations\201705220533400_remove-required-department-id.Designer.cs">
-      <DependentUpon>201705220533400_remove-required-department-id.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705220723116_enabled-lazy-loading.cs" />
-    <Compile Include="Migrations\201705220723116_enabled-lazy-loading.Designer.cs">
-      <DependentUpon>201705220723116_enabled-lazy-loading.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705220745416_nullable-department.cs" />
-    <Compile Include="Migrations\201705220745416_nullable-department.Designer.cs">
-      <DependentUpon>201705220745416_nullable-department.cs</DependentUpon>
+    <Compile Include="Migrations\201705220820190_initial-migration.cs" />
+    <Compile Include="Migrations\201705220820190_initial-migration.Designer.cs">
+      <DependentUpon>201705220820190_initial-migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Department.cs" />
@@ -225,7 +185,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705220820190_initial-migration.resx">
+      <DependentUpon>201705220820190_initial-migration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
